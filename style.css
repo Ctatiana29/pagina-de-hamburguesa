@@ -295,9 +295,11 @@ p{
 @media(max-width: 600px){
     .menu{
         padding: 30px;
+        position: relative;
     }
     .menu label{
-        display: initial;
+        display: block;
+        cursor: pointer;
     }
 
     .menu .navbar{
@@ -307,12 +309,25 @@ p{
         right: 0;
         background-color: #323337;
         display: none;
+        flex-direction: column;
+    }
+
+    .menu .navbar ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     .menu .navbar ul li{
         width: 100%;
+        float: none;
+        text-align: center;
     }
     #menu:checked ~ .navbar{
-        display: initial;
+        display: flex;
+    }
+    .menu-icono{
+        width: 35px;
+        height: 35px;
     }
 
     .header{
